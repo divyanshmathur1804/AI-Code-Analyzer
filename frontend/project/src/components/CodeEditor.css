@@ -1,0 +1,78 @@
+.code-editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--color-bg-secondary);
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.editor-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.editor-info {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.editor-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.line-numbers {
+  padding: 1rem 0.5rem;
+  background-color: var(--color-bg-primary);
+  border-right: 1px solid var(--color-border);
+  user-select: none;
+  min-width: 50px;
+  text-align: right;
+}
+
+.line-numbers pre {
+  margin: 0;
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.code-input {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  resize: none;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: auto;
+}
+
+.code-input:focus {
+  outline: none;
+  border: none;
+}
+
+.code-input::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.5;
+}
